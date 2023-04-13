@@ -45,9 +45,10 @@ function getData() {
     $.get(url, function (data) {
         const temperature = data.temperature;
         const humidity = data.humidity;
-        console.log(data.i);
+        const i = data.i;
         $("#temperature-value").text(temperature)
         $("#humidity-value").text(humidity)
+        $("#measurement-number").text(i)
         temperatureGauge.set(temperature)
         humidityGauge.set(humidity);
     })

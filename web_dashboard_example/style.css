@@ -1,0 +1,19 @@
+.gauge-container {
+    position: relative;
+    width: fit-content;
+    height: 300px;
+}
+
+.gauge-text {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.gauge-canvas {
+    width: 380px;
+    height: 150px;
+    position: relative;
+    top: 80px
+}

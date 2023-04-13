@@ -16,7 +16,7 @@ void setup(void)
   
   //while(!SerialUSB);
   lora.init();
-  lora.setKey(0, 0, "1CB2FF08BEEE308966E3C0AF5567914E");
+  lora.setKey(0, 0, "C0ECB0E88BC10EEB2C95F7AEA0B0F7C0");
   
   lora.setDeciveMode(LWOTAA);
   lora.setDataRate(DR0, EU868);
@@ -70,9 +70,11 @@ void loop(void)
 
 void getSensorData(){
     lpp.reset();
-    int humidity = dht.readHumidity();
+    //int humidity = dht.readHumidity();
+    int humidity = 50;
     lpp.addRelativeHumidity(3, humidity);
-    int temp = dht.readTemperature();
+    //int temp = dht.readTemperature();
+    int temp = 20;
     lpp.addTemperature(4, temp);
 
     SerialUSB.print("Temp: ");

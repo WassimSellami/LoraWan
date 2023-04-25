@@ -7,7 +7,11 @@ app.use(cors());
 app.use(bodyParser.json());
 const port = 3000;
 
-let data;
+let data={
+  temperature:0,
+  humidity:0,
+  i:-1
+};
 
 app.post("/events", (req, res, next) => {
   let body = req.body;
